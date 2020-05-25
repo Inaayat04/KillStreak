@@ -1,0 +1,5 @@
+name: KillStreak
+version: 1.0.0
+main: Inaayat\KillStreak
+api: [3.0.0]
+author: Inaayat
