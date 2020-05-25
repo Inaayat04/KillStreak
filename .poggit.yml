@@ -1,0 +1,10 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/Inaayat04/KillStreak
+build-by-default: true
+branches:
+- master
+projects:
+  KillStreak:
+    path: ""
+    lint:
+      phpstan: false
+...
