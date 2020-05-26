@@ -23,14 +23,14 @@ class SQLiteProvider implements ProviderInterface {
     }
 
     public function addKSPoints(Player $player, int $points = 1): void{
-        $stmt = $this->killstreakdb->prepare("INSERT OR REPLACE INTO master (player, kills, deaths) VALUES (:player, :kills, :deaths)");
+        $stmt = $this->killstreakdb->prepare("INSERT OR REPLACE INTO master (player, ks) VALUES (:player, :ks)");
         $stmt->bindValue(":player", $player->getLowerCaseName());
         $stmt->bindValue(":ks", $this->getPlayerKSPoints($player) + $points);
         $stmt->execute();
     }
 
     public function resetKSPoints(Player $player): int{
-        $stmt = $this->killstreakdb->prepare("INSERT OR REPLACE INTO master (player, kills, deaths) VALUES (:player, :kills, :deaths)");
+        $stmt = $this->killstreakdb->prepare("INSERT OR REPLACE INTO master (player, ks) VALUES (:player, :ks)");
         $stmt->bindValue(":player", $player->getLowerCaseName());
         $stmt->bindValue(":ks", "0");
         $stmt->execute();
@@ -45,7 +45,7 @@ class SQLiteProvider implements ProviderInterface {
 
     public function getPlayerKSPoints(Player $player): int{
         $playerName = $player->getLowerCaseName();
-        $result = $this->killstreakdb->query("SELECT kills FROM master WHERE player = '$playerName'");
+        $result = $this->killstreakdb->query("SELECT ks FROM master WHERE player = '$playerName'");
         $resultArray = $result->fetchArray(SQLITE3_ASSOC);
         return (int) $resultArray["ks"];
     }
