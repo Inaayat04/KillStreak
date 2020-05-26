@@ -41,4 +41,5 @@ namespace JackMD\ScoreHud\Addons
 			$ks = $this->KillStreak;
 			return $ks->getProvider()->getPlayerKSPoints($player);
 		}
+	}
 }
