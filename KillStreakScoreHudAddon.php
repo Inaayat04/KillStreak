@@ -39,7 +39,7 @@ namespace JackMD\ScoreHud\Addons
 		 */
 		public function getPlayerKS(Player $player): string{
 			$ks = $this->KillStreak;
-			return $ks->getProvider()->getPlayerKSPoints($player);
+			return (int) $ks->getProvider()->getPlayerKSPoints($player);
 		}
 	}
 }
