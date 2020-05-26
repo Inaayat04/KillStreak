@@ -29,7 +29,7 @@ class SQLiteProvider implements ProviderInterface {
         $stmt->execute();
     }
 
-    public function resetKSPoints(Player $player): int{
+    public function resetKSPoints(Player $player){
         $stmt = $this->killstreakdb->prepare("INSERT OR REPLACE INTO master (player, ks) VALUES (:player, :ks)");
         $stmt->bindValue(":player", $player->getLowerCaseName());
         $stmt->bindValue(":ks", "0");
