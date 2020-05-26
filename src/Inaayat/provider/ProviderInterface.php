@@ -16,7 +16,7 @@ interface ProviderInterface {
 
     public function getPlayerKSPoints(Player $player): int;
 
-    public function resetKSPoints(Player $player): int;
+    public function resetKSPoints(Player $player);
 
     public function close(): void;
     
