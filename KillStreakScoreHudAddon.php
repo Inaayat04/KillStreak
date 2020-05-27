@@ -29,7 +29,7 @@ namespace JackMD\ScoreHud\Addons
 		 */
 		public function getProcessedTags(Player $player): array{
 			return [
-				"{killstreak}"       => $this->getPlayerKS($player)
+				"{killstreak}"       => $this->KillStreak->getProvider()->getPlayerKSPoints($player)
 			];
 		}
 
