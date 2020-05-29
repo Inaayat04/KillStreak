@@ -4,6 +4,7 @@
 * Get 1 point when kill a player.
 * When you died the point return to 0.
 * There an API for developers.
+[![](https://poggit.pmmp.io/shield.state/KillStreak)](https://poggit.pmmp.io/p/KillStreak)
 
 ## How to Install?
 
