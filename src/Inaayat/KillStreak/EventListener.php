@@ -8,7 +8,7 @@ use pocketmine\event\player\PlayerDeathEvent;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\Player;
 
-class EventListener implements Listener{
+class EventListener implements Listener {
 
     public $plugin;
 
