@@ -29,7 +29,7 @@ class KillStreak extends PluginBase{
         $this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
     }
 
-    public function getProvider(): ProviderInterface{
+    public function getProvider(): ProviderInterface {
         return $this->provider;
     }
     
