@@ -16,7 +16,7 @@
 
 ```php
  <?php
- use Inaayat\KillStreak;
+ use Inaayat\KillStreak\KillStreak;
  ```
  
 ## You can create an instance by doing:
