@@ -10,7 +10,7 @@ class KillStreak extends PluginBase{
 
     private static $instance;
     private $provider;
-
+//test
     public static function getInstance(): KillStreak{
         return self::$instance;
     }
